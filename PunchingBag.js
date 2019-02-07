@@ -15,17 +15,21 @@ new Vue ({
         punch:function(){
             
             this.health-=10;
-            
+            var punch = new Audio("sounds/punch.mp3");
+            punch.play();
             if(this.health<=0)
             {
                 this.gameEnd=true;
-                this.battleCry=" ";
+                this.battleCry="YOU WIN!!!";
+                var punch = new Audio("sounds/win.mp3");
+                punch.play();
             }
         },
         restart:function(){
             this.health = 100;
             this.gameEnd =false;
         },
+
         pickBattleCry:function() {
               this.battleCry = this.battleCries[
                   Math.floor(Math.random() * this.battleCries.length)
@@ -34,12 +38,15 @@ new Vue ({
         
         regainHealth:function(){
             var self = this;
-            if ((this.health<60)){
-                setTimeout(function(){
+            if (this.health<100){
+                setInterval(function(){
                         if(self.health>=100){
+                            var lose = new Audio("sounds/lose.wav");
+                            lose.play();
                         }   
-                        else if(self.health>0){
-                            self.health += 5;
+                        else 
+                        if(self.health>0){
+                            self.health += 2;
                         }
                 
                 }, 1000);

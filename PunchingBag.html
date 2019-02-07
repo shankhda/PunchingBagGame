@@ -20,6 +20,7 @@
         <div id="battle-cries" v-show="!gameEnd">
             {{ battleCry }}
         </div>
+        <h4 v-show="gameEnd">YOU WIN</h4>
         <div id="game-controls">
             <button v-on:click="punch(), pickBattleCry(), regainHealth()">Punch</button>
             <button v-on:click="restart()">Restart</button>
