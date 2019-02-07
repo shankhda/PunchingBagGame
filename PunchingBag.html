@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="PunchingBag.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-    <title>Document</title>
+    <title>Punching Bag</title>
 </head>
 <body>
     
@@ -17,14 +17,13 @@
         <div id="health-bar-container">
             <div id="health-bar" v-bind:style="{ width: health + '%' }"></div>
         </div>
-        <div id="battle-cries" v-show="!gameEnd">
+        <div id="battle-cries" v-if="!gameEnd">
             {{ battleCry }}
         </div>
-        <h4 v-show="gameEnd">YOU WIN</h4>
+        <h4 v-if="gameEnd">YOU WIN</h4>
         <div id="game-controls">
-            <button v-on:click="punch(), pickBattleCry(), regainHealth()">Punch</button>
+            <button v-on:click="punch(), pickBattleCry()">Punch</button>
             <button v-on:click="restart()">Restart</button>
-
         </div>
 
     </div>

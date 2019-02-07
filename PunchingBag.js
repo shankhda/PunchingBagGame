@@ -26,12 +26,13 @@ new Vue ({
             }
         },
         restart:function(){
+            this.battleCry=" ";
             this.health = 100;
             this.gameEnd =false;
         },
 
         pickBattleCry:function() {
-              this.battleCry = this.battleCries[
+            this.battleCry = this.battleCries[
                   Math.floor(Math.random() * this.battleCries.length)
             ];
         },

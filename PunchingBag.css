@@ -1,10 +1,20 @@
-body{
-    background: #F1EA7F;
-}
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+@import url('https://fonts.googleapis.com/css?family=Finger+Paint');
 
 
-h1 , h4{
+h1 {
     text-align: center;
+    font-family: 'Cabin Sketch';
+    font-size: 350%;
+    color: forestgreen;
+  }
+
+  h4{
+    text-align: center;
+    font-family: 'Cabin Sketch';
+    font-size: 36px;
+    color: forestgreen;
+    margin: 0 ;
   }
   
 
@@ -27,7 +37,7 @@ h1 , h4{
 
 #health-bar-container{
     width: 200px;
-    border: 3px solid #4CAF50;
+    border: 3px solid forestgreen;
     margin: 0 auto 20px auto;
 }
 
@@ -47,20 +57,21 @@ h1 , h4{
     cursor: pointer;
     outline: none;
     color: #fff;
-    background-color: #4CAF50;
+    background-color: forestgreen;
     border: none;
     border-radius: 5px;
-    box-shadow: 0 6px #999;
+    box-shadow: 0 6px rgb(59, 59, 59);
     margin: 0 auto;
   }
   
   button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 3px #666;
+   
     transform: translateY(4px);
   }
 
   #battle-cries{
     text-align: center;
-    margin-bottom: 5px;
+    font-family: 'Finger Paint';
+    color:crimson;
+    font-size: 24px;
   }
