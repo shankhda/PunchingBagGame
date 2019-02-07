@@ -1,0 +1,56 @@
+body{
+    background: #F1EA7F;
+}
+
+
+h1 {
+    text-align: center;
+  }
+  
+
+#punching-bag-app{
+    margin: 0 auto;
+}
+
+#bag-img-container{
+    width: 200px;
+    height: 400px;
+    margin: 0 auto;
+    background: url('img/bag.png') center no-repeat;
+    background-size: 80%
+}
+
+#health-bar-container{
+    width: 200px;
+    border: 3px solid #4CAF50;
+    margin: 0 auto 20px auto;
+}
+
+#health-bar{
+    height: 20px;
+    background:#9E1030; 
+}
+#game-controls {
+    width: 210px;
+    margin: 0 auto;
+  }
+
+#game-controls button {
+    padding: 10px 15px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 6px #999;
+    margin: 0 auto;
+  }
+  
+  button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 3px #666;
+    transform: translateY(4px);
+  }
