@@ -49,7 +49,7 @@ new Vue ({
         regainHealth:function(){
            if((this.health<100)&(this.health>0)) 
           {
-                this.health += 1.5;
+                this.health += 5;
             }
                        
             console.log('called regainHealth');
@@ -70,7 +70,7 @@ new Vue ({
     },
     mounted(){
         
-        setInterval(this.regainHealth, 500);
+        setInterval(this.regainHealth, 1000);
     }
 
 });
