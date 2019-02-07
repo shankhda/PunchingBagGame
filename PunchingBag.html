@@ -17,9 +17,11 @@
         <div id="health-bar-container">
             <div id="health-bar" v-bind:style="{ width: health + '%' }"></div>
         </div>
-        <div id="battle-cries"></div>
+        <div id="battle-cries" v-show="!gameEnd">
+            {{ battleCry }}
+        </div>
         <div id="game-controls">
-            <button v-on:click="punch()">Punch</button>
+            <button v-on:click="punch(), pickBattleCry(), regainHealth()">Punch</button>
             <button v-on:click="restart()">Restart</button>
 
         </div>
