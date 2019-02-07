@@ -15,6 +15,7 @@ new Vue ({
         },
         restart:function(){
             this.health = 100;
+            this.gameEnd =false;
         }
     }
 
