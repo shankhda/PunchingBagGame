@@ -1,6 +1,6 @@
 new Vue ({
 
-    el:'punching-bag-app',
+    el:'#punching-bag-app',
     data:{
         health:100,
         gameEnd:false

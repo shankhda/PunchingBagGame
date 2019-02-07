@@ -12,20 +12,20 @@
     
     <div id="punching-bag-app">
         <h1>Punch The Bag</h1>
-        <div id="bag-img-container" v-bind:class="{ burst: gameEnd }"></div>
+        <div id="bag-img-container" ></div>
 
         <div id="health-bar-container">
-            <div id="health-bar" v-bind:style='{width: health + %}'></div>
+            <div id="health-bar" v-bind:style="{ width: health + '%' }"></div>
         </div>
         <div id="battle-cries"></div>
         <div id="game-controls">
-            <button v-on:click='punch'>Punch</button>
-            <button v-on:click='restart'>Restart</button>
+            <button v-on:click="punch()">Punch</button>
+            <button v-on:click="restart()">Restart</button>
 
         </div>
 
     </div>
-
     <script src="PunchingBag.js"></script>
+    
 </body>
 </html>
