@@ -10,7 +10,14 @@ new Vue ({
                     'Let them feel true pain!',
                     'Leave only ashes!',
                     'Destroy everything!',
-                    'Kill them all, leave no-one standing!'],
+                    'Kill them all, leave no-one standing!',
+                    'Bring me their teeth!',
+                    'Remove them from this Earth!',
+                    'Leave them with nothing!',
+                    'Death to the enemy!',
+                    'Make them fear your name!',
+                    'Bring them to their knees!',
+                    'You are the apocalypse!'],
     },
     methods:{
         punch:function(){
