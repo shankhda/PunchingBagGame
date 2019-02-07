@@ -5,7 +5,7 @@
 h1 {
     text-align: center;
     font-family: 'Cabin Sketch';
-    font-size: 350%;
+    font-size: 300%;
     color: black;
   }
 
@@ -24,7 +24,7 @@ h1 {
 
 #bag-img-container{
     width: 200px;
-    height: 400px;
+    height: 390px;
     margin: 0 auto;
     background: url('img/bag.png') center no-repeat;
     background-size: 80%
@@ -46,8 +46,9 @@ h1 {
     background:#9E1030; 
 }
 #game-controls {
-    width: 210px;
+    width: 120px;
     margin: 0 auto;
+    align-items: center;
   }
 
 #game-controls button {
@@ -61,7 +62,8 @@ h1 {
     border: none;
     border-radius: 5px;
     box-shadow: 0 6px rgb(59, 59, 59);
-    margin: 0 auto;
+    width:90%;
+    margin-bottom: 10px;
   }
   
   button:active {

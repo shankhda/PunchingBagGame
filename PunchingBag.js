@@ -5,6 +5,7 @@ new Vue ({
         health:100,
         gameEnd:false,
         gameRestart:false,
+        gameLost:false,
         battleCry: " ",
         battleCries: ['Death to the weak!',
                     'Let them feel true pain!',
@@ -22,14 +23,14 @@ new Vue ({
     methods:{
         punch:function(){
             this.gameRestart=false;
-            this.health-=10;
+            this.gameLost= false;
+            this.health-=20;
             var punch = new Audio("sounds/punch.mp3");
             punch.play();
             if(this.health<=0)
             {
                 this.gameEnd=true;
-                this.battleCry="YOU WIN!!!";
-                var punch = new Audio("sounds/win.mp3");
+                var punch = new Audio("sounds/win.wav");
                 punch.play();
             }
         },
@@ -38,6 +39,7 @@ new Vue ({
             this.health = 100;
             this.gameEnd =false;
             this.gameRestart=true;
+            this.gameLost= false;
         },
 
         pickBattleCry:function() {
@@ -49,7 +51,7 @@ new Vue ({
         regainHealth:function(){
            if((this.health<100)&(this.health>0)) 
           {
-                this.health += 5;
+                this.health += 10;
             }
                        
             console.log('called regainHealth');
@@ -64,6 +66,7 @@ new Vue ({
                 var lose = new Audio("sounds/lose.wav");
                 lose.play();
                 this.battleCry = "YOU LOSE!!!"
+                this.gameLost=true;
             } 
         }
         
